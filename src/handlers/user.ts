@@ -4,6 +4,7 @@ import { createJWT, hashPassword, comparePasswords } from '../modules/auth'
  export const createNewUser = async (req,res,next) => {
     //we need two try catches for 2 different async functions
     try{
+        console.log("hola")
         const user = await prisma.user.create({
             data: {
                 username: req.body.username,
