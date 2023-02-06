@@ -10,7 +10,9 @@ import { createJWT, hashPassword, comparePasswords } from '../modules/auth'
                 password: await hashPassword(req.body.password) 
             }
         })
+        console.log("hola")
         const token = createJWT(user)
+        console.log("amigos")
         res.json({token})
     }catch(e){
         e.type = 'input'
