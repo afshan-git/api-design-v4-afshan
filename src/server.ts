@@ -35,7 +35,7 @@ app.get('/',(req,res,next) => {
     res.json({message:"hello"})
 })   
 
-app.use('/api', router)  
+app.use('/api',protect, router)  
 // allows to apply some global configuration
 
 app.use('/user',createNewUser)
