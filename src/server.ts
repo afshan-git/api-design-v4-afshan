@@ -38,6 +38,7 @@ app.get('/',(req,res,next) => {
 app.use('/api',protect, router)  
 // allows to apply some global configuration
 
+
 app.use('/user',createNewUser)
 app.post('/signin',signin)
 
